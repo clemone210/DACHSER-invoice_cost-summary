@@ -1,5 +1,5 @@
 
-# [Step 1 — Downloading the Python Installer](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-1-downloading-the-python-installer)[](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-1-downloading-the-python-installer)
+# Step 1 — Downloading the Python Installer
 
 1.  Go to the official  [Python download page for Windows](https://www.python.org/downloads/windows/).
     
@@ -10,7 +10,7 @@
     ![Download Python Installer](https://deved-images.nyc3.digitaloceanspaces.com/CONTINT-1526%2Fpy_download.png)
     
 
-# [Step 2 — Running the Executable Installer](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-2-running-the-executable-installer)[](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-2-running-the-executable-installer)
+# Step 2 — Running the Executable Installer
 
 1.  After the installer is downloaded, double-click the  `.exe`  file, for example  `python-3.10.10-amd64.exe`, to run the Python installer.
     
@@ -57,7 +57,7 @@
     ![Python setup was successful](https://deved-images.nyc3.digitaloceanspaces.com/CONTINT-1526%2Fpy-installer-success.png)
     
 
-# [Step 3 — Adding Python to the Environment Variables (optional)](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-3-adding-python-to-the-environment-variables-optional)[](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-3-adding-python-to-the-environment-variables-optional)
+# Step 3 — Adding Python to the Environment Variables (optional)
 
 Skip this step if you selected  **Add Python to environment variables**  during installation.
 
@@ -83,7 +83,7 @@ Note that the folder name will be different if you installed a different version
 5.  Click  **New**  and enter the Python directory path, then click  **OK**  until all the dialogs are closed.
     
 
-## [Step 4 — Verify the Python Installation](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-4-verify-the-python-installation)[](https://www.digitalocean.com/community/tutorials/install-python-windows-10#step-4-verify-the-python-installation)
+# Step 4 — Verify the Python Installation
 
 You can verify whether the Python installation is successful either through the command line or through the Integrated Development Environment (IDLE) application, if you chose to install it.
 
