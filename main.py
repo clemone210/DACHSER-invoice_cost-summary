@@ -11,6 +11,13 @@ if not invoice_files:
 
 all_dataframes = []
 
+# Helper function to check if a dataframe is unique in our list
+def is_unique_dataframe(df, df_list):
+    for existing_df in df_list:
+        if df.equals(existing_df):
+            return False
+    return True
+
 for file in invoice_files:
     path = os.path.join('invoices', file)
     df = pd.read_csv(path, delimiter=';')
@@ -18,8 +25,15 @@ for file in invoice_files:
     # Filter rows where 'Leistungsartenbezeichnung' is not empty
     df = df[df['Leistungsartenbezeichnung'].notna()]
 
-    all_dataframes.append(df)
+    # Only append the dataframe to the list if it's unique
+    if is_unique_dataframe(df, all_dataframes):
+        all_dataframes.append(df)
+    else:
+        print(f"Skipped duplicate dataframe from file: {file}")
 
+# Concatenate all the dataframes
+final_df = pd.concat(all_dataframes, ignore_index=True)
+    
 # Concatenate all the dataframes
 final_df = pd.concat(all_dataframes, ignore_index=True)
 
@@ -42,3 +56,4 @@ summary_df = final_df.groupby('Erstauftragsnummer').agg({'Leistungsarten-Nettobe
 with pd.ExcelWriter('Invoice-overview.xlsx') as writer:
     output_df.to_excel(writer, sheet_name='Detailed Overview', index=False)
     summary_df.to_excel(writer, sheet_name='Cost Summary', index=False)
+    
